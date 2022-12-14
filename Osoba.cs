@@ -8,17 +8,17 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EsDnevnik2022A
+namespace EsDnevnik
 {
     public partial class Osoba : Form
     {
-        int broj_sloga = 0;
-        DataTable tabela;
+        public int broj_sloga = 0;
+        public DataTable tabela;
         public Osoba()
         {
             InitializeComponent();
         }
-        private void TxtPopulate()
+        public void TxtPopulate()
         {
             if (tabela.Rows.Count == 0)
             {
@@ -26,6 +26,9 @@ namespace EsDnevnik2022A
                 tbIme.Text = "";
                 tbPrezime.Text = "";
                 tbAdresa.Text = "";
+                tbJMBG.Text = "";
+                tbEmail.Text = "";
+                tbUloga.Text = "";
             }
             else
             {
@@ -33,6 +36,13 @@ namespace EsDnevnik2022A
                 tbIme.Text = tabela.Rows[broj_sloga][1].ToString();
                 tbPrezime.Text = tabela.Rows[broj_sloga][2].ToString();
                 tbAdresa.Text = tabela.Rows[broj_sloga][3].ToString();
+                tbJMBG.Text = tabela.Rows[broj_sloga][4].ToString();
+                tbEmail.Text = tabela.Rows[broj_sloga][5].ToString();
+                tbUloga.Text = tabela.Rows[broj_sloga][7].ToString();
+                if (tbUloga.Text == "1")
+                    tbUloga.Text = "Ucenik";
+                else
+                    tbUloga.Text = "Profesor";
                 if (broj_sloga == tabela.Rows.Count - 1)
                 {
                     btNext.Enabled = false;
@@ -133,27 +143,8 @@ namespace EsDnevnik2022A
 
         private void btnIns_Click(object sender, EventArgs e)
         {
-            string naredba = "INSERT INTO osoba VALUES('";
-            // DODATI NAVODNIKE!!!
-            naredba = naredba + tbIme.Text + "','";
-            naredba = naredba + tbPrezime.Text + "','";
-            naredba = naredba + tbAdresa.Text + "',";
-            naredba = naredba + "NULL, NULL, NULL, 0)";
-            textBox1.Text = naredba;
-            // textBox1.Text = naredba;
-            SqlConnection veza = konekcija.connect();
-            SqlCommand komanda = new SqlCommand(naredba, veza);
-            try
-            {
-                veza.Open();
-                komanda.ExecuteNonQuery();
-                veza.Close();
-            }
-            catch (Exception graska) { MessageBox.Show(graska.GetType().ToString()); }
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM osoba", veza);
-            tabela = new DataTable(); // MORA!!!
-            da.Fill(tabela);
-            TxtPopulate();
+            Dodaj nova = new Dodaj(tabela);
+            nova.Show();
             label4.Text = "Podatak uspesno dodat";
         }
     }

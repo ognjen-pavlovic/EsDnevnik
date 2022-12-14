@@ -5,9 +5,9 @@ using System.Text;
 using System.Data.SqlClient;
 
 
-namespace EsDnevnik2022A
+namespace EsDnevnik
 {
-    class konekcija
+    public class konekcija
     {
         public static SqlConnection connect()
         {

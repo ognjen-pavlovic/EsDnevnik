@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{61F0649B-32C7-45CF-AE4F-FF4C6E0492A8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EsDnevnik2022A</RootNamespace>
-    <AssemblyName>EsDnevnik2022A</AssemblyName>
+    <RootNamespace>EsDnevnik</RootNamespace>
+    <AssemblyName>EsDnevnik</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj.Designer.cs">
+      <DependentUpon>Dodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Glavna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dodaj.resx">
+      <DependentUpon>Dodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Glavna.resx">
       <DependentUpon>Glavna.cs</DependentUpon>
     </EmbeddedResource>

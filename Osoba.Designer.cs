@@ -1,5 +1,5 @@
 ﻿
-namespace EsDnevnik2022A
+namespace EsDnevnik
 {
     partial class Osoba
     {
@@ -33,9 +33,9 @@ namespace EsDnevnik2022A
             this.tbIme = new System.Windows.Forms.TextBox();
             this.tbPrezime = new System.Windows.Forms.TextBox();
             this.tbAdresa = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbJMBG = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbUloga = new System.Windows.Forms.TextBox();
             this.btFirst = new System.Windows.Forms.Button();
             this.btPrev = new System.Windows.Forms.Button();
             this.btNext = new System.Windows.Forms.Button();
@@ -48,6 +48,10 @@ namespace EsDnevnik2022A
             this.label4 = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnIns = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbId
@@ -69,7 +73,7 @@ namespace EsDnevnik2022A
             // 
             // tbPrezime
             // 
-            this.tbPrezime.Location = new System.Drawing.Point(260, 182);
+            this.tbPrezime.Location = new System.Drawing.Point(260, 176);
             this.tbPrezime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPrezime.Name = "tbPrezime";
             this.tbPrezime.Size = new System.Drawing.Size(148, 26);
@@ -83,34 +87,34 @@ namespace EsDnevnik2022A
             this.tbAdresa.Size = new System.Drawing.Size(148, 26);
             this.tbAdresa.TabIndex = 3;
             // 
-            // textBox5
+            // tbJMBG
             // 
-            this.textBox5.Location = new System.Drawing.Point(260, 300);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 26);
-            this.textBox5.TabIndex = 4;
+            this.tbJMBG.Location = new System.Drawing.Point(260, 300);
+            this.tbJMBG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbJMBG.Name = "tbJMBG";
+            this.tbJMBG.Size = new System.Drawing.Size(148, 26);
+            this.tbJMBG.TabIndex = 4;
             // 
-            // textBox6
+            // tbEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(260, 362);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(148, 26);
-            this.textBox6.TabIndex = 5;
+            this.tbEmail.Location = new System.Drawing.Point(260, 362);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(148, 26);
+            this.tbEmail.TabIndex = 5;
             // 
-            // textBox7
+            // tbUloga
             // 
-            this.textBox7.Location = new System.Drawing.Point(260, 415);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(148, 26);
-            this.textBox7.TabIndex = 6;
+            this.tbUloga.Location = new System.Drawing.Point(260, 415);
+            this.tbUloga.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbUloga.Name = "tbUloga";
+            this.tbUloga.Size = new System.Drawing.Size(148, 26);
+            this.tbUloga.TabIndex = 6;
             // 
             // btFirst
             // 
             this.btFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFirst.Location = new System.Drawing.Point(82, 567);
+            this.btFirst.Location = new System.Drawing.Point(77, 609);
             this.btFirst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btFirst.Name = "btFirst";
             this.btFirst.Size = new System.Drawing.Size(56, 56);
@@ -122,7 +126,7 @@ namespace EsDnevnik2022A
             // btPrev
             // 
             this.btPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPrev.Location = new System.Drawing.Point(218, 567);
+            this.btPrev.Location = new System.Drawing.Point(213, 609);
             this.btPrev.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btPrev.Name = "btPrev";
             this.btPrev.Size = new System.Drawing.Size(56, 56);
@@ -134,7 +138,7 @@ namespace EsDnevnik2022A
             // btNext
             // 
             this.btNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNext.Location = new System.Drawing.Point(536, 567);
+            this.btNext.Location = new System.Drawing.Point(531, 609);
             this.btNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(56, 56);
@@ -146,7 +150,7 @@ namespace EsDnevnik2022A
             // btLast
             // 
             this.btLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLast.Location = new System.Drawing.Point(679, 567);
+            this.btLast.Location = new System.Drawing.Point(674, 609);
             this.btLast.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btLast.Name = "btLast";
             this.btLast.Size = new System.Drawing.Size(56, 56);
@@ -158,7 +162,7 @@ namespace EsDnevnik2022A
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 63);
+            this.label1.Location = new System.Drawing.Point(84, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 20);
@@ -168,7 +172,7 @@ namespace EsDnevnik2022A
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 125);
+            this.label2.Location = new System.Drawing.Point(84, 121);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 20);
@@ -178,7 +182,7 @@ namespace EsDnevnik2022A
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 191);
+            this.label3.Location = new System.Drawing.Point(84, 182);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 20);
@@ -187,7 +191,7 @@ namespace EsDnevnik2022A
             // 
             // btUpd
             // 
-            this.btUpd.Location = new System.Drawing.Point(344, 506);
+            this.btUpd.Location = new System.Drawing.Point(339, 548);
             this.btUpd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btUpd.Name = "btUpd";
             this.btUpd.Size = new System.Drawing.Size(112, 35);
@@ -198,7 +202,7 @@ namespace EsDnevnik2022A
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 455);
+            this.textBox1.Location = new System.Drawing.Point(13, 497);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(694, 26);
@@ -207,16 +211,16 @@ namespace EsDnevnik2022A
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(489, 362);
+            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.Location = new System.Drawing.Point(748, 500);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 16;
-            this.label4.Text = "label4";
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(508, 506);
+            this.btnDel.Location = new System.Drawing.Point(503, 548);
             this.btnDel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(112, 35);
@@ -227,7 +231,7 @@ namespace EsDnevnik2022A
             // 
             // btnIns
             // 
-            this.btnIns.Location = new System.Drawing.Point(190, 506);
+            this.btnIns.Location = new System.Drawing.Point(185, 548);
             this.btnIns.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIns.Name = "btnIns";
             this.btnIns.Size = new System.Drawing.Size(112, 35);
@@ -236,11 +240,55 @@ namespace EsDnevnik2022A
             this.btnIns.UseVisualStyleBackColor = true;
             this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(84, 244);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Adresa";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(84, 306);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 20);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "JMBG";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(84, 368);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 20);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "e-mail";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(84, 421);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Uloga";
+            // 
             // Osoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 692);
+            this.ClientSize = new System.Drawing.Size(1073, 834);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnIns);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.label4);
@@ -253,9 +301,9 @@ namespace EsDnevnik2022A
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btPrev);
             this.Controls.Add(this.btFirst);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbUloga);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbJMBG);
             this.Controls.Add(this.tbAdresa);
             this.Controls.Add(this.tbPrezime);
             this.Controls.Add(this.tbIme);
@@ -275,9 +323,9 @@ namespace EsDnevnik2022A
         private System.Windows.Forms.TextBox tbIme;
         private System.Windows.Forms.TextBox tbPrezime;
         private System.Windows.Forms.TextBox tbAdresa;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbJMBG;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbUloga;
         private System.Windows.Forms.Button btFirst;
         private System.Windows.Forms.Button btPrev;
         private System.Windows.Forms.Button btNext;
@@ -290,6 +338,10 @@ namespace EsDnevnik2022A
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnIns;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

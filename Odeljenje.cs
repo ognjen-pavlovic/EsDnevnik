@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EsDnevnik2022A
+namespace EsDnevnik
 {
     public partial class Odeljenje : Form
     {

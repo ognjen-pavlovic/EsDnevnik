@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace EsDnevnik2022A
+namespace EsDnevnik
 {
     static class Program
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace EsDnevnik2022A
+namespace EsDnevnik
 {
     partial class Odeljenje
     {

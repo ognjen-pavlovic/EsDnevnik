@@ -15,5 +15,10 @@ namespace EsDnevnik2022A
         {
             InitializeComponent();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
